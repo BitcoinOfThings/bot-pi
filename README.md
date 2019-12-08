@@ -1,5 +1,5 @@
-# bot-pie
-BitcoinOfThings.com with Raspberry Pie
+# bot-pi
+BitcoinOfThings.com with Raspberry Pi
 
 Control stuff with Bitcoin
 
@@ -8,7 +8,7 @@ Control stuff with Bitcoin
 
 # Install
 ```
-git clone https://github.com/bitcoinofthings/bot-pie
+git clone https://github.com/bitcoinofthings/bot-pi
 ```
 Your Raspberry Pi has to be setup to allow programming of the GPIO pins.  
 Install requirements...
