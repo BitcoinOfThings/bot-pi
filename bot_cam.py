@@ -9,7 +9,7 @@ import datetime
 CAMFILE = "bot.jpg"
 CAMHEIGHT = 200 
 CAMWIDTH = 300
-CAMWAIT = 60
+CAMWAIT = 54
 topic = "demo/cam"
 
 def take_pic():
@@ -17,7 +17,7 @@ def take_pic():
     camera_annotate_text_size = 32
     camera.framerate = 15
     camera.resolution = (CAMWIDTH, CAMHEIGHT)
-    camera.image_effect = 'cartoon'
+    #camera.image_effect = 'cartoon'
     camera.start_preview(alpha=200)
     #camera.start_recording('bot.h264')
     sleep(5)
@@ -46,6 +46,7 @@ try:
                 #print(pic)
                 jMessage = {"clientId":"demo", "message": pic}
                 #print(jMessage)
+                #mqttc.publish(topic, 'pic {0}'.format(dt))
                 mqttc.publish(topic, json.dumps(jMessage))
                 print("{0}: published pic".format(dt))
             os.remove(CAMFILE)
